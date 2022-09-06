@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91d3ae3add9748ea9e44e4766cb247ee" Name="Diagram1">
+        <EntityTypeShape EntityType="DULICHModel.ChinhSachHuyVe" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.ChiTietDatVe" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.GiamGia" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.HuyTour" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.KH" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.LichTrinhTour" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.NhanVien" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.SoDatTour" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.sysdiagram" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DULICHModel.Tour" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DULICHModel.FK_HuyTour_ChinhSachHuyVe" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_ChiTietDatVe_SoDatTour" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_HuyTour_ChiTietDatVe" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_SoDatTour_GiamGia" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_SoDatTour_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_Tour_LichTrinhTour" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_Tour_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="DULICHModel.FK_SoDatTour_Tour" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

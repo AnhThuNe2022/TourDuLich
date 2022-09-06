@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{252E1F1F-28EF-48AF-8E6D-DD39F5557B33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TourDuLich</RootNamespace>
+    <AssemblyName>TourDuLich</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\BUS_ChiTietDatVe.cs" />
+    <Compile Include="BUS\BUS_HuyTour.cs" />
+    <Compile Include="BUS\BUS_KhachHang.cs" />
+    <Compile Include="BUS\BUS_LichTrinh.cs" />
+    <Compile Include="BUS\BUS_NhanVien.cs" />
+    <Compile Include="BUS\BUS_SoDatTour.cs" />
+    <Compile Include="BUS\BUS_Tour.cs" />
+    <Compile Include="ChinhSachHuyVe.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietDatVe.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAO.cs" />
+    <Compile Include="DAO\DAO_ChiTietDonHang.cs" />
+    <Compile Include="DAO\DAO_HuyTour.cs" />
+    <Compile Include="DAO\DAO_KhachHang.cs" />
+    <Compile Include="DAO\DAO_LichTrinh.cs" />
+    <Compile Include="DAO\DAO_NhanVien.cs" />
+    <Compile Include="DAO\DAO_SoDatTour.cs" />
+    <Compile Include="DAO\DAO_Tour.cs" />
+    <Compile Include="FChonTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChonTour.Designer.cs">
+      <DependentUpon>FChonTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDatTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDatTour.Designer.cs">
+      <DependentUpon>FDatTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGioHang.Designer.cs">
+      <DependentUpon>FGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\DinhDangF.cs" />
+    <Compile Include="FormQuanLy\FChiTietDatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FChiTietDatVe.Designer.cs">
+      <DependentUpon>FChiTietDatVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FHuyTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FHuyTour.Designer.cs">
+      <DependentUpon>FHuyTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FKhachHang.Designer.cs">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FLichTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FLichTrinh.Designer.cs">
+      <DependentUpon>FLichTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FNhanVien.Designer.cs">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FSoDatTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FSoDatTour.Designer.cs">
+      <DependentUpon>FSoDatTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FTour.Designer.cs">
+      <DependentUpon>FTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemTour.Designer.cs">
+      <DependentUpon>FXemTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamGia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HuyTour.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KH.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LichTrinhTour.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoDatTour.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tour.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourDL.cs" />
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChonTour.resx">
+      <DependentUpon>FChonTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDatTour.resx">
+      <DependentUpon>FDatTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGioHang.resx">
+      <DependentUpon>FGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FChiTietDatVe.resx">
+      <DependentUpon>FChiTietDatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FHuyTour.resx">
+      <DependentUpon>FHuyTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FKhachHang.resx">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FLichTrinh.resx">
+      <DependentUpon>FLichTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FNhanVien.resx">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FSoDatTour.resx">
+      <DependentUpon>FSoDatTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FTour.resx">
+      <DependentUpon>FTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemTour.resx">
+      <DependentUpon>FXemTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\backward-button.png" />
+    <None Include="bin\Debug\Image\search.png" />
+    <None Include="bin\Debug\Image\272168023_655106509255738_8446447640885407151_n.jpg" />
+    <None Include="bin\Debug\Image\259541510_428253495372826_2816650464839986623_n.jpg" />
+    <None Include="bin\Debug\Image\271470701_1146807906129474_8026712794376328827_n.jpg" />
+    <None Include="bin\Debug\Image\271764930_473827547454646_7753460865510448196_n.jpg" />
+    <None Include="bin\Debug\Image\249803599_1046075376149170_3288184945387529455_n.jpg" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
